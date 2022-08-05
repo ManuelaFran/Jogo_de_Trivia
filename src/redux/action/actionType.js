@@ -1,3 +1,0 @@
-const REQUEST_TOKEN = 'REQUEST_TOKEN';
-
-export default REQUEST_TOKEN;
