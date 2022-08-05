@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import getRequestToken from '../service/apiToken';
 
 class Login extends Component {
   constructor() {
@@ -23,6 +25,14 @@ class Login extends Component {
       return true;
     }
     return false;
+  }
+
+  handleBtn = async () => {
+    const { history } = this.props;
+    const token = await getRequestToken();
+
+    localStorage.setItem('token', token);
+    history.push('/game');
   }
 
   render() {
@@ -56,6 +66,7 @@ class Login extends Component {
             disabled={ !this.handleBtnValidation() }
             type="button"
             data-testid="btn-play"
+            onClick={ this.handleBtn }
           >
             Play
           </button>
@@ -64,5 +75,9 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+};
 
 export default Login;
