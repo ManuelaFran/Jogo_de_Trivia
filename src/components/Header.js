@@ -3,7 +3,6 @@ import md5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-// O placar zerado em um elemento que deve possuir o atributo data-testid com o valor header-score
 class Header extends Component {
   convertEmail = () => {
     const { gravatarEmail } = this.props;
