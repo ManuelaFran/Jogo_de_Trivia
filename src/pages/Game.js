@@ -43,7 +43,7 @@ class Game extends Component {
               return (
                 <div key={ index }>
                   <p data-testid="question-category">{quest.category}</p>
-                  <p data-testid="text-category">{quest.question}</p>
+                  <p data-testid="question-text">{quest.question}</p>
                   <div data-testid="answer-options">
                     {
                       allAnswers.sort(() => Math.random() - Number('0.5'))
@@ -51,7 +51,7 @@ class Game extends Component {
                           if (answer === quest.correct_answer) {
                             return (
                               <button
-                                data-testid="correct_answer"
+                                data-testid="correct-answer"
                                 type="button"
                                 key={ indexAnswer }
                               >
@@ -61,7 +61,7 @@ class Game extends Component {
                           }
                           return (
                             <button
-                              data-testid={ `wrong_answer-${indexAnswer}` }
+                              data-testid={ `wrong-answer-${indexAnswer}` }
                               type="button"
                               key={ indexAnswer }
                             >
