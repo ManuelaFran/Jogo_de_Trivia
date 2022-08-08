@@ -5,6 +5,7 @@ import Header from '../components/Header';
 class Game extends Component {
   constructor() {
     super();
+    this.timer = null;
     this.state = {
       questions: [],
       indexQuestion: 0,
@@ -44,7 +45,7 @@ class Game extends Component {
   handleTimer = () => {
     const { timer } = this.state;
     if (timer > 0) {
-      setTimeout(() => {
+      this.timer = setTimeout(() => {
         this.setState({
           timer: timer - 1,
         });
@@ -54,6 +55,7 @@ class Game extends Component {
 
   handleNextQuestion = () => {
     const { indexQuestion } = this.state;
+    clearTimeout(this.timer);
     this.setState({ indexQuestion: indexQuestion + 1,
       colorBtn: false,
       timer: 30,
