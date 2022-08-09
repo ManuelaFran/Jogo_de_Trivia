@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 class Feedback extends Component {
   render() {
-    const { player } = this.props;
+    const { assertions, score, history } = this.props;
     const menorTres = <p data-testid="feedback-text">Could be better...</p>;
     const maiorTres = <p data-testid="feedback-text">Well Done!</p>;
     const tres = 3;
@@ -14,21 +14,39 @@ class Feedback extends Component {
         <p>Feedback</p>
         <Header />
         {
-          player.assertions >= tres ? maiorTres : menorTres
+          assertions >= tres ? maiorTres : menorTres
         }
-        <p data-testid="feedback-total-score">{player.score}</p>
-        <p data-testid="feedback-total-question">{player.assertions}</p>
+        <p data-testid="feedback-total-score">{score}</p>
+        <p data-testid="feedback-total-question">{assertions}</p>
+        <button
+          type="button"
+          data-testid="btn-play-again"
+          onClick={ () => history.push('/') }
+        >
+          Play Again
+        </button>
+        <button
+          type="button"
+          data-testid="btn-ranking"
+          onClick={ () => history.push('/ranking') }
+        >
+          Ranking
+        </button>
       </div>
     );
   }
 }
 
 Feedback.propTypes = {
-  player: PropTypes.number.isRequired,
+  assertions: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired,
+  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+
 };
 
 const mapStateToProps = (state) => ({
-  player: state.player,
+  assertions: state.player.assertions,
+  score: state.player.score,
 });
 
 export default connect(mapStateToProps)(Feedback);
