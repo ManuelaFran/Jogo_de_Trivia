@@ -69,7 +69,6 @@ class Game extends Component {
   }
 
   handleScore = (difficulty) => {
-    console.log(difficulty);
     const { timer } = this.state;
     const { saveScoreAction: setScore } = this.props;
     this.setState({ colorBtn: true });
