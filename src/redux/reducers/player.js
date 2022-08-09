@@ -1,4 +1,4 @@
-import { SAVE_EMAIL, SAVE_NAME, SAVE_SCORE } from '../actions/actionType';
+import { CLEAR_SCORE, SAVE_EMAIL, SAVE_NAME, SAVE_SCORE } from '../actions/actionType';
 
 const INITIAL_STATE = {
   name: '',
@@ -24,6 +24,13 @@ const player = (state = INITIAL_STATE, action) => {
       ...state,
       score: action.score + state.score,
       assertions: state.assertions + 1,
+    };
+  case CLEAR_SCORE:
+    return {
+      name: '',
+      assertions: 0,
+      score: 0,
+      gravatarEmail: '',
     };
   default:
     return state;

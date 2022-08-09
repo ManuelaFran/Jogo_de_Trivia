@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import md5 from 'crypto-js/md5';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
+import { clearScoreAction } from '../redux/actions';
 
 class Feedback extends Component {
   componentDidMount() {
@@ -32,7 +33,7 @@ class Feedback extends Component {
   }
 
   render() {
-    const { assertions, score, history } = this.props;
+    const { assertions, score, history, clearScoreAction: clearScore } = this.props;
     const menorTres = <p data-testid="feedback-text">Could be better...</p>;
     const maiorTres = <p data-testid="feedback-text">Well Done!</p>;
     const tres = 3;
@@ -48,7 +49,10 @@ class Feedback extends Component {
         <button
           type="button"
           data-testid="btn-play-again"
-          onClick={ () => history.push('/') }
+          onClick={ () => {
+            clearScore();
+            history.push('/');
+          } }
         >
           Play Again
         </button>
@@ -70,7 +74,12 @@ Feedback.propTypes = {
   name: PropTypes.string.isRequired,
   gravatarEmail: PropTypes.string.isRequired,
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+  clearScoreAction: PropTypes.func.isRequired,
 };
+
+const mapDispatchToProps = (dispatch) => ({
+  clearScoreAction: (state) => dispatch(clearScoreAction(state)),
+});
 
 const mapStateToProps = (state) => ({
   assertions: state.player.assertions,
@@ -79,4 +88,4 @@ const mapStateToProps = (state) => ({
   gravatarEmail: state.player.gravatarEmail,
 });
 
-export default connect(mapStateToProps)(Feedback);
+export default connect(mapStateToProps, mapDispatchToProps)(Feedback);

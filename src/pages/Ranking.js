@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { clearScoreAction } from '../redux/actions';
 
 class Ranking extends Component {
   render() {
-    const { history } = this.props;
+    const { history, clearScoreAction: clearScore } = this.props;
     const ranking = JSON.parse(localStorage.getItem('ranking'));
     return (
       <div>
@@ -33,7 +35,10 @@ class Ranking extends Component {
         <button
           type="button"
           data-testid="btn-go-home"
-          onClick={ () => history.push('/') }
+          onClick={ () => {
+            clearScore();
+            history.push('/');
+          } }
         >
           Play Again
         </button>
@@ -42,8 +47,13 @@ class Ranking extends Component {
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  clearScoreAction: (state) => dispatch(clearScoreAction(state)),
+});
+
 Ranking.propTypes = {
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+  clearScoreAction: PropTypes.func.isRequired,
 };
 
-export default Ranking;
+export default connect(null, mapDispatchToProps)(Ranking);
