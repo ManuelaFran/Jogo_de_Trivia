@@ -76,14 +76,12 @@ class Game extends Component {
     const medium = (Number('10') + (timer * 2));
     const hard = Number('10') + (timer * Number('3'));
     switch (difficulty) {
+    default:
+      return setScore(hard);
     case 'easy':
       return setScore(easy);
     case 'medium':
       return setScore(medium);
-    case 'hard':
-      return setScore(hard);
-    default:
-      return 0;
     }
   }
 
@@ -139,15 +137,17 @@ class Game extends Component {
                     })
                   }
                 </div>
-                { colorBtn && (
-                  <button
-                    data-testid="btn-next"
-                    type="button"
-                    onClick={ this.handleNextQuestion }
-                  >
-                    Next
-                  </button>
-                )}
+                {
+                  colorBtn === true || timer === 0 ? (
+                    <button
+                      data-testid="btn-next"
+                      type="button"
+                      onClick={ this.handleNextQuestion }
+                    >
+                      Next
+                    </button>
+                  ) : null
+                }
               </div>
             ))[indexQuestion]
           }
