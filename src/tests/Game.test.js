@@ -39,7 +39,7 @@ describe('', () => {
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
         userEvent.click(screen.getByTestId('correct-answer'));
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
-        userEvent.click(screen.getByTestId('wrong-answer-1'));
+        userEvent.click(screen.getByTestId('correct-answer'));
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
         jest.runAllTimers()
         userEvent.click(screen.getByRole('button', {  name: /next/i}));

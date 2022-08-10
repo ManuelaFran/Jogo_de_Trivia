@@ -39,7 +39,7 @@ describe('', () => {
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
         userEvent.click(screen.getByTestId('correct-answer'));
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
-        userEvent.click(screen.getByTestId('wrong-answer-1'));
+        userEvent.click(screen.getByTestId('correct-answer'));
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
         jest.runAllTimers()
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
@@ -64,13 +64,17 @@ describe('', () => {
         const btnPlay = screen.getByRole('button', {  name: /play/i});
         userEvent.click(btnPlay);
         await waitFor(() => expect(fetiche).toHaveBeenCalled() );
-        userEvent.click(screen.getByTestId('wrong-answer-1'));
+        const first = screen.getAllByTestId(/wrong/i);
+        userEvent.click(first[0]);
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
-        userEvent.click(screen.getByTestId('wrong-answer-1'));
+        const second = screen.getAllByTestId(/wrong/i);
+        userEvent.click(second[0]);
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
-        userEvent.click(screen.getByTestId('wrong-answer-1'));
+        const third = screen.getAllByTestId(/wrong/i);
+        userEvent.click(third[0]);
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
-        userEvent.click(screen.getByTestId('wrong-answer-1'));
+        const fourth = screen.getAllByTestId(/wrong/i);
+        userEvent.click(fourth[0]);
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
         jest.runAllTimers()
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
