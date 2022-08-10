@@ -76,12 +76,12 @@ class Game extends Component {
     const medium = (Number('10') + (timer * 2));
     const hard = Number('10') + (timer * Number('3'));
     switch (difficulty) {
+    default:
+      return setScore(hard);
     case 'easy':
       return setScore(easy);
     case 'medium':
       return setScore(medium);
-    default:
-      return setScore(hard);
     }
   }
 
