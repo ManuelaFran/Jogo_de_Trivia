@@ -9,11 +9,11 @@ const email = 'alguem@email.com';
 
 describe('Testando o componente Login', () => {
   it('Testa os inputs e buttons', () => {
-    const { history } = renderWithRouterAndRedux(<App />);
+    renderWithRouterAndRedux(<App />);
     const inputName = screen.getByRole('textbox', {  name: /name/i});
     userEvent.type(inputName, name)
     const inputEmail = screen.getByRole('textbox', {  name: /email/i});
-    userEvent.type(inputName, email)
+    userEvent.type(inputEmail, email)
   });
 
   it('Testa botão play', async () => {

@@ -22,7 +22,7 @@ describe('', () => {
             ok: true,   
           });
 
-        const fetiche = jest
+        const fetchApi = jest
         .spyOn(global, "fetch")
         .mockImplementation(() => apiResponse);
 
@@ -32,7 +32,7 @@ describe('', () => {
         userEvent.type(inputEmail, email)
         const btnPlay = screen.getByRole('button', {  name: /play/i});
         userEvent.click(btnPlay);
-        await waitFor(() => expect(fetiche).toHaveBeenCalled() );
+        await waitFor(() => expect(fetchApi).toHaveBeenCalled() );
         userEvent.click(screen.getByTestId('correct-answer'));
         userEvent.click(screen.getByRole('button', {  name: /next/i}));
         userEvent.click(screen.getByTestId('correct-answer'));
@@ -55,7 +55,7 @@ describe('', () => {
             ok: true,   
           });
 
-        const fetiche = jest
+        const fetchApi = jest
         .spyOn(global, "fetch")
         .mockImplementation(() => apiResponse);
 
@@ -65,7 +65,7 @@ describe('', () => {
         userEvent.type(inputEmail, email)
         const btnPlay = screen.getByRole('button', {  name: /play/i});
         userEvent.click(btnPlay);
-        await waitFor(() => expect(fetiche).toHaveBeenCalled() );
+        await waitFor(() => expect(fetchApi).toHaveBeenCalled() );
 
 
 
