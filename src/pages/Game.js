@@ -80,10 +80,8 @@ class Game extends Component {
       return setScore(easy);
     case 'medium':
       return setScore(medium);
-    case 'hard':
-      return setScore(hard);
     default:
-      return 0;
+      return setScore(hard);
     }
   }
 
@@ -139,15 +137,17 @@ class Game extends Component {
                     })
                   }
                 </div>
-                { colorBtn && (
-                  <button
-                    data-testid="btn-next"
-                    type="button"
-                    onClick={ this.handleNextQuestion }
-                  >
-                    Next
-                  </button>
-                )}
+                {
+                  colorBtn === true || timer === 0 ? (
+                    <button
+                      data-testid="btn-next"
+                      type="button"
+                      onClick={ this.handleNextQuestion }
+                    >
+                      Next
+                    </button>
+                  ) : null
+                }
               </div>
             ))[indexQuestion]
           }

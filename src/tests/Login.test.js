@@ -26,8 +26,7 @@ describe('Testando o componente Login', () => {
     userEvent.type(inputEmail, email)
     expect(btnPlay).toHaveProperty('disabled', false);
     userEvent.click(btnPlay);
-    expect(await screen.findByText(/score/i));
-    
+    expect(await screen.findByText(/nome/i));
   });
 
   it('Testa botão settings', () => {
