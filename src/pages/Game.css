@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: fantasy;
+}
+
+.game-container {
+  background: grey;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 3px 8px 18px;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  width: 30%;
+}
+
+.rightAnswer {
+  align-self: center;
+  background-color: rgb(63, 163, 66);
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(221, 218, 218);
+  box-sizing: border-box;
+  color: white;
+  font-weight: 700;
+  height: 35px;
+  margin-bottom: 8px;
+  width: 200px;
+}
+
+.wrongAnswer {
+  align-self: center;
+  background-color: rgb(221, 61, 61);
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(221, 218, 218);
+  box-sizing: border-box;
+  color: white;
+  font-weight: 700;
+  height: 35px;
+  margin-bottom: 8px;
+  width: 200px;
+}
+
+.btn-answer {
+  align-self: center;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(221, 218, 218);
+  box-sizing: border-box;
+  font-weight: 700;
+  height: 35px;
+  margin-bottom: 8px;
+  width: 200px;
+}
+
+.btn-next {
+  align-self: center;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(221, 218, 218);
+  box-sizing: border-box;
+  font-weight: 700;
+  height: 35px;
+  margin-bottom: 8px;
+  width: 200px;
+}

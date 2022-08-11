@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import md5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import './Header.css';
 
 class Header extends Component {
   convertEmail = () => {
@@ -13,14 +14,15 @@ class Header extends Component {
   render() {
     const { name, score } = this.props;
     return (
-      <div>
-        <img src={ `https://www.gravatar.com/avatar/${this.convertEmail()}` } alt="Imagem do jogador" data-testid="header-profile-picture" />
-        <p data-testid="header-player-name">
+      <div className="header-container">
+        <img className="header-img" src={ `https://www.gravatar.com/avatar/${this.convertEmail()}` } alt="Imagem do jogador" data-testid="header-profile-picture" />
+        <p className="header-name" data-testid="header-player-name">
           Nome:
           {' '}
           {name}
         </p>
-        <p data-testid="header-score">
+        <p className="header-score" data-testid="header-score">
+          Score:
           {score}
         </p>
       </div>

@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-play-again {
+  align-self: center;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(221, 218, 218);
+  box-sizing: border-box;
+  height: 35px;
+  margin-bottom: 8px;
+  width: 200px;
+}
+
+.btn-ranking {
+  align-self: center;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(221, 218, 218);
+  box-sizing: border-box;
+  height: 35px;
+  margin-bottom: 8px;
+  width: 200px;
+}

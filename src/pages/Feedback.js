@@ -4,6 +4,7 @@ import md5 from 'crypto-js/md5';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import { clearScoreAction } from '../redux/actions';
+import './Feedback.css';
 
 class Feedback extends Component {
   componentDidMount() {
@@ -39,14 +40,15 @@ class Feedback extends Component {
     const tres = 3;
     return (
       <div>
-        <p>Feedback</p>
         <Header />
+        <h1>Feedback</h1>
         {
           assertions >= tres ? maiorTres : menorTres
         }
         <p data-testid="feedback-total-score">{score}</p>
         <p data-testid="feedback-total-question">{assertions}</p>
         <button
+          className="btn-play-again"
           type="button"
           data-testid="btn-play-again"
           onClick={ () => {
@@ -57,6 +59,7 @@ class Feedback extends Component {
           Play Again
         </button>
         <button
+          className="btn-ranking"
           type="button"
           data-testid="btn-ranking"
           onClick={ () => history.push('/ranking') }

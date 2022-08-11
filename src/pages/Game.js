@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import { saveScoreAction } from '../redux/actions';
+import './Game.css';
 
 class Game extends Component {
   constructor() {
@@ -90,68 +91,71 @@ class Game extends Component {
     return (
       <div>
         <Header />
-        <p>
-          {timer}
-        </p>
-        <section>
-          {
-            questions.map((quest, index) => (
-              <div key={ index }>
-                <p data-testid="question-category">{quest.category}</p>
-                <p data-testid="question-text">{quest.question}</p>
-                <div data-testid="answer-options">
-                  {
-                    allAnswers[indexQuestion].map((answer, indexAnswer) => {
-                      if (answer === quest.correct_answer) {
+        <div className="game-container">
+          <p>
+            {timer}
+          </p>
+          <section>
+            {
+              questions.map((quest, index) => (
+                <div key={ index }>
+                  <p data-testid="question-category">{quest.category}</p>
+                  <p data-testid="question-text">{quest.question}</p>
+                  <div data-testid="answer-options">
+                    {
+                      allAnswers[indexQuestion].map((answer, indexAnswer) => {
+                        if (answer === quest.correct_answer) {
+                          return (
+                            <button
+                              disabled={ timer <= 0 }
+                              onClick={ () => {
+                                clearTimeout(this.timer);
+                                this.handleScore(quest.difficulty);
+                              } }
+                              className={ colorBtn ? 'rightAnswer' : 'btn-answer' }
+                              data-testid="correct-answer"
+                              type="button"
+                              key={ indexAnswer }
+                            >
+                              {answer}
+                            </button>
+                          );
+                        }
                         return (
                           <button
                             disabled={ timer <= 0 }
                             onClick={ () => {
                               clearTimeout(this.timer);
-                              this.handleScore(quest.difficulty);
+                              this.setState({ colorBtn: true });
                             } }
-                            className={ colorBtn ? 'rightAnswer' : null }
-                            data-testid="correct-answer"
+                            className={ colorBtn ? 'wrongAnswer' : 'btn-answer' }
+                            data-testid={ `wrong-answer-${indexAnswer}` }
                             type="button"
                             key={ indexAnswer }
                           >
                             {answer}
                           </button>
                         );
-                      }
-                      return (
-                        <button
-                          disabled={ timer <= 0 }
-                          onClick={ () => {
-                            clearTimeout(this.timer);
-                            this.setState({ colorBtn: true });
-                          } }
-                          className={ colorBtn ? 'wrongAnswer' : null }
-                          data-testid={ `wrong-answer-${indexAnswer}` }
-                          type="button"
-                          key={ indexAnswer }
-                        >
-                          {answer}
-                        </button>
-                      );
-                    })
+                      })
+                    }
+                  </div>
+                  {
+                    colorBtn === true || timer === 0 ? (
+                      <button
+                        className="btn-next"
+                        data-testid="btn-next"
+                        type="button"
+                        onClick={ this.handleNextQuestion }
+                      >
+                        Next
+                      </button>
+                    ) : null
                   }
                 </div>
-                {
-                  colorBtn === true || timer === 0 ? (
-                    <button
-                      data-testid="btn-next"
-                      type="button"
-                      onClick={ this.handleNextQuestion }
-                    >
-                      Next
-                    </button>
-                  ) : null
-                }
-              </div>
-            ))[indexQuestion]
-          }
-        </section>
+              ))[indexQuestion]
+            }
+          </section>
+        </div>
       </div>
     );
   }

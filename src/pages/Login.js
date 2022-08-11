@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import getRequestToken from '../service/apiToken';
 import { saveEmailAction, saveNameAction } from '../redux/actions';
+import './Login.css';
 
 class Login extends Component {
   constructor() {
@@ -43,11 +44,12 @@ class Login extends Component {
     const { name, email } = this.state;
     const { history } = this.props;
     return (
-      <div>
-        <form>
+      <div className="login-container">
+        <form className="form-login">
+          <p>Name</p>
           <label htmlFor="inputName">
-            Name
             <input
+              className="input-name"
               onChange={ this.handleChange }
               value={ name }
               name="name"
@@ -56,9 +58,10 @@ class Login extends Component {
               id="inputName"
             />
           </label>
+          <p>Email</p>
           <label htmlFor="inputEmail">
-            Email
             <input
+              className="input-email"
               value={ email }
               onChange={ this.handleChange }
               name="email"
@@ -68,6 +71,7 @@ class Login extends Component {
             />
           </label>
           <button
+            className="btn-play"
             disabled={ !this.handleBtnValidation() }
             type="button"
             data-testid="btn-play"
@@ -76,6 +80,7 @@ class Login extends Component {
             Play
           </button>
           <button
+            className="btn-settings"
             type="button"
             data-testid="btn-settings"
             onClick={ () => history.push('/settings') }
