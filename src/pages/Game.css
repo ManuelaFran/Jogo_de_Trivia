@@ -4,20 +4,16 @@
   padding: 0;
 }
 
-body {
-  font-family: fantasy;
-}
-
 .game-container {
-  background: grey;
+  background: white;
   border: 1px solid black;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 3px 8px 18px;
+  border-radius: 10px;
+  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #141A40 0px 0px 20px, #141A40 0px 0px 30px, #141A40 0px 0px 40px, #141A40 0px 0px 50px, #141A40 0px 0px 75px;
   display: flex;
   flex-direction: column;
   height: 50%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 80px;
   padding: 10px;
   width: 30%;
 }
@@ -63,13 +59,19 @@ body {
 
 .btn-next {
   align-self: center;
-  background: white;
+  background: #80F2E7;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 2px 2px rgb(221, 218, 218);
+  /* box-shadow: 2px 2px rgb(221, 218, 218); */
+  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;
   box-sizing: border-box;
   font-weight: 700;
   height: 35px;
   margin-bottom: 8px;
+  margin-top: 8%;
   width: 200px;
+}
+
+p {
+  margin: auto;
 }

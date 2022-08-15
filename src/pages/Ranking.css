@@ -4,28 +4,43 @@
   padding: 0;
 }
 
-.btn-go-home {
-  align-self: center;
-  background: blueviolet;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 2px 2px rgb(221, 218, 218);
-  box-sizing: border-box;
+.titleRanking {
   color: white;
-  font-weight: 700;
-  height: 35px;
-  margin-bottom: 8px;
-  width: 200px;
+  font-size: 50px;
+  margin-bottom: 9%;
+  margin-top: 2%;
+  text-align: center;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #141A40 0px 0px 20px, #141A40 0px 0px 30px, #141A40 0px 0px 40px, #141A40 0px 0px 50px, #141A40 0px 0px 75px;
 }
 
 .ranking {
-  align-items: center;
-  background-color: rgb(50, 167, 145);
-  border: 1px solid black;
-  border-radius: 8px;
+  background-color: white;
+  border: 3px solid #80F2E7;
+  border-radius: 5px;
   display: flex;
+  height: 50px;
   justify-content: space-between;
   margin: 10px;
+  margin-left: 440px;
   padding: 10px;
   width: 400px;
+}
+
+.btn-go-home {
+  align-self: center;
+  background: #80F2E7;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;
+  box-sizing: border-box;
+  color: black;
+  font-weight: 700;
+  height: 35px;
+  margin-bottom: 8px;
+  margin-top: 2%;
+  width: 200px;
+}
+
+.img-ranking {
+  height: 30px;
 }

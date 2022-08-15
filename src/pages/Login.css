@@ -4,33 +4,28 @@
   padding: 0;
 }
 
-.login-container {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  margin: auto;
-  width: 100vh;
+body {
+  background-color: #141A40;
 }
 
 .form-login {
-  background: grey;
+  background-color: #80F2E7;
   border: 1px solid black;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 3px 8px 18px;
+  border-radius: 10px;
+  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;;
   display: flex;
   flex-direction: column;
   height: 40%;
   margin: auto;
-  padding: 10px;
-  width: 40%;
+  padding: 30px;
+  width: 20%;
 }
 
 .input-name {
   align-self: center;
   background: white;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
   box-sizing: border-box;
   height: 35px;
   margin-bottom: 8px;
@@ -41,7 +36,7 @@
   align-self: center;
   background: white;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
   box-sizing: border-box;
   height: 35px;
   margin-bottom: 8px;
@@ -50,9 +45,9 @@
 
 .btn-play {
   align-self: center;
-  background: rgb(53, 53, 241);
+  background: #141A40;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 2px 2px rgb(221, 218, 218);
   box-sizing: border-box;
   color: white;
@@ -66,10 +61,33 @@
   align-self: center;
   background: white;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 2px 2px rgb(221, 218, 218);
   box-sizing: border-box;
+  font-weight: 700;
   height: 35px;
   margin-bottom: 8px;
   width: 200px;
+}
+
+.labelNameEmail {
+  margin-right: 150px;
+}
+
+.titleLogin {
+  align-self: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  font-size: 90px;
+  height: 40%;
+  line-height: 100px;
+  margin: auto;
+  margin-bottom: auto;
+  margin-left: 390px;
+  padding: 30px;
+  text-align: center;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #141A40 0px 0px 20px, #141A40 0px 0px 30px, #141A40 0px 0px 40px, #141A40 0px 0px 50px, #141A40 0px 0px 75px;
+  width: 300px;
+  width: 40%;
 }

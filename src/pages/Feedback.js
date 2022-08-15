@@ -35,18 +35,26 @@ class Feedback extends Component {
 
   render() {
     const { assertions, score, history, clearScoreAction: clearScore } = this.props;
-    const menorTres = <p data-testid="feedback-text">Could be better...</p>;
-    const maiorTres = <p data-testid="feedback-text">Well Done!</p>;
+    const menorTres = <p className="messageCouldBeBetter" data-testid="feedback-text">Could be better...</p>;
+    const maiorTres = <p className="messageWellDone" data-testid="feedback-text">Well Done!</p>;
     const tres = 3;
     return (
       <div>
         <Header />
-        <h1>Feedback</h1>
+        <h1 className="titleFeedback">Feedback</h1>
         {
           assertions >= tres ? maiorTres : menorTres
         }
-        <p data-testid="feedback-total-score">{score}</p>
-        <p data-testid="feedback-total-question">{assertions}</p>
+        <p className="scoreAssertions" data-testid="feedback-total-score">
+          Score:
+          {' '}
+          {score}
+        </p>
+        <p className="scoreAssertions" data-testid="feedback-total-question">
+          Assertions:
+          {' '}
+          {assertions}
+        </p>
         <button
           className="btn-play-again"
           type="button"

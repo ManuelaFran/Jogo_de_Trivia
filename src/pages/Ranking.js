@@ -10,14 +10,14 @@ class Ranking extends Component {
     const ranking = JSON.parse(localStorage.getItem('ranking'));
     return (
       <div>
-        <h1 data-testid="ranking-title">Ranking</h1>
+        <h1 className="titleRanking" data-testid="ranking-title">Ranking</h1>
         <div>
           {
             ranking.map((item, index) => (
               <div className="ranking" key={ index }>
                 <img
                   className="img-ranking"
-                  src={ item.gravatarEmail }
+                  src={ `https://www.gravatar.com/avatar/${item.picture}` }
                   alt={ item.name }
                 />
                 <p
@@ -45,7 +45,7 @@ class Ranking extends Component {
             history.push('/');
           } }
         >
-          Play Again
+          Home
         </button>
       </div>
     );

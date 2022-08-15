@@ -6,12 +6,8 @@
 
 .header-container {
   align-items: center;
-  background: #909090;
-
-  /* background: -moz-linear-gradient(top, #909090 0%, #000000 100%);
-  background: -webkit-linear-gradient(top, #909090 0%, #000000 100%);
-  background: linear-gradient(to bottom, #909090 0%, #000000 100%); */
-  border-radius: 10px;
+  background: #0B1226;
+  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;
   color: white;
   display: flex;
   font-weight: 700;
@@ -21,11 +17,15 @@
 }
 
 .header-name {
+  color: white;
   margin-right: 800px;
 }
 
 .header-score {
+  color: red;
+  font-size: larger;
   margin-right: 10%;
+  padding: 6px;
 }
 
 .header-img {

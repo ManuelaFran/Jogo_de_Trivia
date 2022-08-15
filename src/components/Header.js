@@ -17,7 +17,7 @@ class Header extends Component {
       <div className="header-container">
         <img className="header-img" src={ `https://www.gravatar.com/avatar/${this.convertEmail()}` } alt="Imagem do jogador" data-testid="header-profile-picture" />
         <p className="header-name" data-testid="header-player-name">
-          Nome:
+          Name:
           {' '}
           {name}
         </p>

@@ -45,8 +45,9 @@ class Login extends Component {
     const { history } = this.props;
     return (
       <div className="login-container">
+        <h1 className="titleLogin">TRIVIA</h1>
         <form className="form-login">
-          <p>Name</p>
+          <p className="labelNameEmail">Name</p>
           <label htmlFor="inputName">
             <input
               className="input-name"
@@ -58,7 +59,7 @@ class Login extends Component {
               id="inputName"
             />
           </label>
-          <p>Email</p>
+          <p className="labelNameEmail">Email</p>
           <label htmlFor="inputEmail">
             <input
               className="input-email"
@@ -77,7 +78,7 @@ class Login extends Component {
             data-testid="btn-play"
             onClick={ this.handleBtn }
           >
-            Play
+            PLAY
           </button>
           <button
             className="btn-settings"
