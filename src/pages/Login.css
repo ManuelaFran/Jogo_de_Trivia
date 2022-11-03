@@ -5,14 +5,29 @@
 }
 
 body {
-  background-color: #141A40;
+  background-color: #141a40;
+}
+
+.titleLogin {
+  align-self: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 90px;
+  height: 40%;
+  line-height: 100px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  text-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #141a40 0px 0px 20px , #141a40 0px 0px 30px , #141a40 0px 0px 40px , #141a40 0px 0px 50px , #141a40 0px 0px 75px;
+  width: 40%;
 }
 
 .form-login {
-  background-color: #80F2E7;
+  background-color: #80f2e7;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;;
+  box-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #80f2e7 0px 0px 20px , #80f2e7 0px 0px 30px , #80f2e7 0px 0px 40px , #80f2e7 0px 0px 50px , #80f2e7 0px 0px 75px;
   display: flex;
   flex-direction: column;
   height: 40%;
@@ -45,7 +60,7 @@ body {
 
 .btn-play {
   align-self: center;
-  background: #141A40;
+  background: #141a40;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 2px 2px rgb(221, 218, 218);
@@ -72,22 +87,4 @@ body {
 
 .labelNameEmail {
   margin-right: 150px;
-}
-
-.titleLogin {
-  align-self: center;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  font-size: 90px;
-  height: 40%;
-  line-height: 100px;
-  margin: auto;
-  margin-bottom: auto;
-  margin-left: 390px;
-  padding: 30px;
-  text-align: center;
-  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #141A40 0px 0px 20px, #141A40 0px 0px 30px, #141A40 0px 0px 40px, #141A40 0px 0px 50px, #141A40 0px 0px 75px;
-  width: 300px;
-  width: 40%;
 }

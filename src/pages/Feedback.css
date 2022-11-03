@@ -9,7 +9,6 @@
   font-size: 50px;
   margin-bottom: 5%;
   margin-top: 5%;
-  /* text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #141A40 0px 0px 20px, #141A40 0px 0px 30px, #141A40 0px 0px 40px, #141A40 0px 0px 50px, #141A40 0px 0px 75px; */
 }
 
 .messageCouldBeBetter {
@@ -19,7 +18,7 @@
 }
 
 .messageWellDone {
-  color:rgb(136, 211, 24);
+  color: rgb(136, 211, 24);
   font-size: 40px;
   margin: auto;
 }
@@ -31,10 +30,10 @@
 
 .btn-play-again {
   align-self: center;
-  background: #80F2E7;
+  background: #80f2e7;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;;
+  box-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #80f2e7 0px 0px 20px , #80f2e7 0px 0px 30px , #80f2e7 0px 0px 40px , #80f2e7 0px 0px 50px , #80f2e7 0px 0px 75px;
   box-sizing: border-box;
   font-weight: 700;
   height: 35px;
@@ -45,10 +44,10 @@
 
 .btn-ranking {
   align-self: center;
-  background: #80F2E7;
+  background: #80f2e7;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;;
+  box-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #80f2e7 0px 0px 20px , #80f2e7 0px 0px 30px , #80f2e7 0px 0px 40px , #80f2e7 0px 0px 50px , #80f2e7 0px 0px 75px;
   box-sizing: border-box;
   font-weight: 700;
   height: 35px;

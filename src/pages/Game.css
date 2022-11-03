@@ -8,7 +8,7 @@
   background: white;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #141A40 0px 0px 20px, #141A40 0px 0px 30px, #141A40 0px 0px 40px, #141A40 0px 0px 50px, #141A40 0px 0px 75px;
+  box-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #141a40 0px 0px 20px , #141a40 0px 0px 30px , #141a40 0px 0px 40px , #141a40 0px 0px 50px , #141a40 0px 0px 75px;
   display: flex;
   flex-direction: column;
   height: 50%;
@@ -16,6 +16,10 @@
   margin-top: 80px;
   padding: 10px;
   width: 30%;
+}
+
+.timerQuestions {
+  margin: auto;
 }
 
 .rightAnswer {
@@ -59,19 +63,14 @@
 
 .btn-next {
   align-self: center;
-  background: #80F2E7;
+  background: #80f2e7;
   border: 1px solid black;
   border-radius: 5px;
-  /* box-shadow: 2px 2px rgb(221, 218, 218); */
-  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;
+  box-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #80f2e7 0px 0px 20px , #80f2e7 0px 0px 30px , #80f2e7 0px 0px 40px , #80f2e7 0px 0px 50px , #80f2e7 0px 0px 75px;
   box-sizing: border-box;
   font-weight: 700;
   height: 35px;
   margin-bottom: 8px;
   margin-top: 8%;
   width: 200px;
-}
-
-p {
-  margin: auto;
 }

@@ -6,8 +6,8 @@
 
 .header-container {
   align-items: center;
-  background: #0B1226;
-  box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #80F2E7 0px 0px 20px, #80F2E7 0px 0px 30px, #80F2E7 0px 0px 40px, #80F2E7 0px 0px 50px, #80F2E7 0px 0px 75px;
+  background: #0b1226;
+  box-shadow: white 0px 0px 5px , white 0px 0px 10px , white 0px 0px 15px , #80f2e7 0px 0px 20px , #80f2e7 0px 0px 30px , #80f2e7 0px 0px 40px , #80f2e7 0px 0px 50px , #80f2e7 0px 0px 75px;
   color: white;
   display: flex;
   font-weight: 700;

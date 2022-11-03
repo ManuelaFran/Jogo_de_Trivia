@@ -92,15 +92,27 @@ class Game extends Component {
       <div>
         <Header />
         <div className="game-container">
-          <p>
+          <p className="timerQuestions">
             {timer}
           </p>
           <section>
             {
               questions.map((quest, index) => (
                 <div key={ index }>
-                  <p data-testid="question-category">{quest.category}</p>
-                  <p data-testid="question-text">{quest.question}</p>
+                  <p
+                    className="timerQuestions"
+                    data-testid="question-category"
+                  >
+                    {quest.category}
+
+                  </p>
+                  <p
+                    className="timerQuestions"
+                    data-testid="question-text"
+                  >
+                    {quest.question}
+
+                  </p>
                   <div data-testid="answer-options">
                     {
                       allAnswers[indexQuestion].map((answer, indexAnswer) => {
