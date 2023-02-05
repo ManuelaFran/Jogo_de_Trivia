@@ -1,4 +1,4 @@
-# :construction: README customizado em construção ! :construction:
+# :question: Jogo de Trivia
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
@@ -11,3 +11,4 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
+![Captura de tela de 2022-08-14 13-19-47](https://user-images.githubusercontent.com/95245210/216848434-1c76b206-ab53-4929-913f-fde8db4bd1ec.png)
