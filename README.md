@@ -1,7 +1,7 @@
 # :question: Jogo de Trivia
 ![Captura de tela de 2022-08-14 13-19-47](https://user-images.githubusercontent.com/95245210/216848434-1c76b206-ab53-4929-913f-fde8db4bd1ec.png)
 
-# Contexto
+# O que foi desenvolvido
 Neste projeto foi desenvolvido um jogo de perguntas e respostas baseado no jogo Trivia, parecido um show do milhão americano, utilizando React e Redux.
 
 O app começa com uma tela na qual a pessoa que joga coloca seu nome e seu e-mail. O e-mail será usado para buscar a foto associada no site Gravatar, se houver.
@@ -22,7 +22,6 @@ Front-end:
 
 ## Instalando Dependências
 
-> Frontend
 ```bash
 cd src/
 npm install
