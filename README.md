@@ -14,7 +14,7 @@ A pessoa que joga pode configurar algumas opções para o jogo em uma tela de co
 
 
 
-## Técnologias usadas
+## Tecnologias usadas
 
 Front-end:
 > Desenvolvido usando: React, Redux, CSS3
